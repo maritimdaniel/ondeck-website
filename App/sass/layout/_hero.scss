@@ -1,0 +1,67 @@
+@use "../utils" as u;
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hero__content {
+    flex: 2;
+    h1 {
+      font-size: 4.5rem;
+      color: black;
+      span {
+        color: orange;
+      }
+    }
+    p {
+      margin: 1rem 0;
+    }
+    a {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .reviews {
+      display: flex;
+      p,
+      img {
+        margin-right: 0.7rem;
+      }
+      img:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include u.breakpoint(small) {
+      flex: 1;
+    }
+
+    @include u.breakpoint(medium) {
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+    @include u.breakpoint(small) {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+    @include u.breakpoint(xsmall) {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .hero__image {
+    flex: 1;
+    img {
+      width: 100%;
+    }
+
+    @include u.breakpoint(small) {
+      display: none;
+    }
+  }
+}

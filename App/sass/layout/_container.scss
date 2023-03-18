@@ -1,0 +1,10 @@
+@use "../utils" as u;
+
+.container {
+  width: 80%;
+  margin: 2rem auto;
+
+  @include u.breakpoint(medium) {
+    width: 90%;
+  }
+}

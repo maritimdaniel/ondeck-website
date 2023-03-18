@@ -1,0 +1,28 @@
+@use "../utils" as u;
+
+.header.large {
+  margin-bottom: 4rem;
+}
+
+.header.large,
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  li {
+    margin-right: 2rem;
+
+    a:hover {
+      color: black;
+    }
+  }
+}
+
+.header.large {
+  @include u.breakpoint(medium) {
+    display: none;
+  }
+}

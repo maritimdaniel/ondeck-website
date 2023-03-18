@@ -1,0 +1,60 @@
+@use "../utils" as u;
+
+.header.small {
+  position: relative;
+  display: none;
+}
+
+.header.small {
+  @include u.breakpoint(medium) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .modal {
+    .products.small {
+      display: none;
+    }
+  }
+}
+
+.header.small {
+  .modal {
+    position: absolute;
+    top: 0.2rem;
+    right: 0;
+
+    .products.small {
+      width: 55vw;
+
+      @include u.breakpoint(small) {
+        width: 60vw;
+      }
+
+      @include u.breakpoint(xsmall) {
+        width: 90vw;
+      }
+    }
+  }
+}
+
+.header.small {
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.7rem;
+
+    p {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.active {
+  display: none;
+}
